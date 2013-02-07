@@ -1,0 +1,2 @@
+sip:alice@contoso.com
+sip:bob@contoso.com

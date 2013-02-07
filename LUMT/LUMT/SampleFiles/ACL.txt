@@ -1,0 +1,7 @@
+User Blocked sip:zoe@contoso.com
+User Workgroup sip:david@contoso.com
+Company Workgroup
+Domain Colleagues fabrikam.com
+FederatedDomains Blocked
+
+

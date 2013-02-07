@@ -1,0 +1,4 @@
+sip:bob@contoso.com
+sip:charlie@contoso.com
+smtp:Team@contoso.com
+sip:supportbot@contoso.com
