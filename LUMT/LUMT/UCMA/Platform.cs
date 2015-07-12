@@ -34,7 +34,7 @@ namespace LUMT.UCMA
             }
             catch (Exception ex)
             {
-                Log.WriteLogEntry("ERROR", String.Format("{0} platform NOT started: {1}", LumtGlobals.ApplicationShortName, ex.Message), String.Format("{0} platform NOT started.", LumtGlobals.ApplicationShortName));
+                Log.WriteLogEntry("ERROR", String.Format("{0} platform NOT started: {1}. Inner Exception: {2}", LumtGlobals.ApplicationShortName, ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)), String.Format("{0} platform NOT started.", LumtGlobals.ApplicationShortName));
                 Program.CloseApplicationOnError();
             }
         }
@@ -51,7 +51,7 @@ namespace LUMT.UCMA
                 }
                 catch (Exception ex)
                 {
-                    Log.WriteLogEntry("ERROR", String.Format("{0} platform NOT shut down: {1}", LumtGlobals.ApplicationShortName, ex.Message));
+                    Log.WriteLogEntry("ERROR", String.Format("{0} platform NOT shut down: {1}. Inner Exception: {2}", LumtGlobals.ApplicationShortName, ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)));
                 }
             }
         }

@@ -90,12 +90,12 @@ namespace LUMT.App
                         }
                         else
                         {
-                            Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}", user.ToLowerInvariant(), pex.Message), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+                            Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), pex.Message, (pex.InnerException == null ? "N/A" : pex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                         }
                     }
                     catch (Exception ex)
                     {
-                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}", user.ToLowerInvariant(), ex.Message), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                     }
                 }
             }
