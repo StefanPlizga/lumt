@@ -122,7 +122,15 @@ namespace LUMT.ManagerClass
                 {
                     if (userEndpoint.User.ContactGroupServices.CurrentState == CollaborationSubscriptionState.Subscribed)
                     {
-                        userEndpoint.User.ContactGroupServices.EndAddGroup(userEndpoint.User.ContactGroupServices.BeginAddGroup(contactsGroupName, "", null, null));
+                        // "Pinned Contacts" are "Favorites" in Lync. They have special xml data that must be set at group creation time.
+                        if (contactsGroupName.ToLowerInvariant() == "pinned contacts")
+                        {
+                            userEndpoint.User.ContactGroupServices.EndAddGroup(userEndpoint.User.ContactGroupServices.BeginAddGroup(contactsGroupName, "<groupExtension groupType=\"pinnedGroup\"><email/></groupExtension>", null, null));
+                        }
+                        else
+                        {
+                            userEndpoint.User.ContactGroupServices.EndAddGroup(userEndpoint.User.ContactGroupServices.BeginAddGroup(contactsGroupName, "", null, null));
+                        }
                         userEndpoint.RefreshContactList();
                     }
                     else
