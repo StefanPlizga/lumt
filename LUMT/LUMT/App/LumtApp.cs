@@ -155,7 +155,7 @@ namespace LUMT.App
                     }
                     catch (Exception ex)
                     {
-                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}", user.ToLowerInvariant(), ex.Message), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                     }
                 }
             }
@@ -217,7 +217,7 @@ namespace LUMT.App
                     }
                     catch (Exception ex)
                     {
-                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}", user.ToLowerInvariant(), ex.Message), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                     }
                 }
             }
@@ -301,7 +301,7 @@ namespace LUMT.App
                     }
                     catch (Exception ex)
                     {
-                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}", user.ToLowerInvariant(), ex.Message), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                     }
                 }
             }
