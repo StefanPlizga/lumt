@@ -81,6 +81,11 @@ namespace LUMT.App
                             contactListManager.RemoveContacts(user, contactsList);
                         }
                     }
+                    catch (RegisterException rex)
+                    {
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}. Diag Info: {3}.", user.ToLowerInvariant(), rex.Message, (rex.InnerException == null ? "N/A" : rex.InnerException.Message), (String.IsNullOrEmpty(rex.DiagnosticInformation.ToString()) ? "N/A" : rex.DiagnosticInformation.ToString())), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+
+                    }
                     catch (PublishSubscribeException pex)
                     {
                         // If contact list provide is UCS (Exchange Server 2013)
@@ -90,7 +95,7 @@ namespace LUMT.App
                         }
                         else
                         {
-                            Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), pex.Message, (pex.InnerException == null ? "N/A" : pex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+                            Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}. Diag Info: {3}.", user.ToLowerInvariant(), pex.Message, (pex.InnerException == null ? "N/A" : pex.InnerException.Message), (String.IsNullOrEmpty(pex.DiagnosticInformation.ToString()) ? "N/A" : pex.DiagnosticInformation.ToString())), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                         }
                     }
                     catch (Exception ex)
@@ -153,6 +158,11 @@ namespace LUMT.App
                             aclManager.RemoveACEs(user, aceList);
                         }
                     }
+                    catch (RegisterException rex)
+                    {
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}. Diag Info: {3}.", user.ToLowerInvariant(), rex.Message, (rex.InnerException == null ? "N/A" : rex.InnerException.Message), (String.IsNullOrEmpty(rex.DiagnosticInformation.ToString()) ? "N/A" : rex.DiagnosticInformation.ToString())), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+
+                    }
                     catch (Exception ex)
                     {
                         Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}", user.ToLowerInvariant(), ex.Message, (ex.InnerException == null ? "N/A" : ex.InnerException.Message)), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
@@ -214,6 +224,10 @@ namespace LUMT.App
                     try
                     {
                         privacyManager.SetPrivacyPreference(user, userPrivacyPreference);
+                    }
+                    catch (RegisterException rex)
+                    {
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}. Diag Info: {3}.", user.ToLowerInvariant(), rex.Message, (rex.InnerException == null ? "N/A" : rex.InnerException.Message), (String.IsNullOrEmpty(rex.DiagnosticInformation.ToString()) ? "N/A" : rex.DiagnosticInformation.ToString())), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
                     }
                     catch (Exception ex)
                     {
@@ -298,6 +312,11 @@ namespace LUMT.App
                     try
                     {
                         alertsManager.SetAlertNotificationSetting(user, notifyAdditionToContactList, alertsWhenDoNotDisturb);
+                    }
+                    catch (RegisterException rex)
+                    {
+                        Log.WriteLogEntry("ERROR", String.Format("Error while processing user {0}: {1}. Inner Exception: {2}. Diag Info: {3}.", user.ToLowerInvariant(), rex.Message, (rex.InnerException == null ? "N/A" : rex.InnerException.Message), (String.IsNullOrEmpty(rex.DiagnosticInformation.ToString()) ? "N/A" : rex.DiagnosticInformation.ToString())), String.Format("Error while processing user {0}", user.ToLowerInvariant()));
+
                     }
                     catch (Exception ex)
                     {
