@@ -14,3 +14,7 @@ With LUMT, it is possible to:
 - Change alert notification settings for the user (this corresponds to the settings in Options/Alerts in Lync client)
 
 **Important: _The software and source code are provided as samples_. They are licensed "as-is." You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. See MS-PL license description for more details.**
+
+# Documentation
+Documentation is available here: [LUMT Documentation](docs/Documentation.md)
+
