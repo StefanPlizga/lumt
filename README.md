@@ -18,5 +18,7 @@ With LUMT, it is possible to:
 # Documentation
 Documentation is available here: [LUMT Documentation](docs/Documentation.md)
 
-# Using LUMT with Lync Server 2013
-Version 1.4.0.0 must be used with Lync Server 2013. It can be found in the [Releases](releases) page.
+# LUMT Download
+All versions are available in the [Releases](https://github.com/StefanPlizga/lumt/releases) section
+* Latest vestion (1.5.0.0) for Skype for Business Server 2015.
+* Version 1.4.0.0 for Lync Server 2013.
