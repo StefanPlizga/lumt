@@ -20,5 +20,5 @@ Documentation is available here: [LUMT Documentation](docs/Documentation.md)
 
 # LUMT Download
 All versions are available in the [Releases](https://github.com/StefanPlizga/lumt/releases) section
-* Latest vestion (1.5.0.0) for Skype for Business Server 2015.
+* Latest version (1.5.0.0) for Skype for Business Server 2015.
 * Version 1.4.0.0 for Lync Server 2013.
