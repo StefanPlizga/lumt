@@ -10,12 +10,15 @@
 	* Enhanced error logging has been added.
 * 1.4.0.0:
 	* Additional error logging has been added.
-	* Lync for Server 2013 version
-	* Imported from CodePlex (http://lumt.codeplex.com)
+	* Lync for Server 2013 version.
+	* Imported from CodePlex (http://lumt.codeplex.com).
+* 1.5.0.0:
+	* Skype for Business Server 2015 version (UCMA 5.0).
+	* Solution upgraded to Visual Studio 2017.
 
 # Help
 ## Description
-LUMT tool can be used to manage contacts, ACEs, privacy settings or alert notification settings for Lync Server 2013 users.
+LUMT tool can be used to manage contacts, ACEs, privacy settings or alert notification settings for Skype for Business Server 2015 users.
 
 **Important: _The software and source code are provided as samples_. They are licensed "as-is." You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. See MS-PL license description for more details.**
 
@@ -25,10 +28,10 @@ LUMT tool can be used to manage contacts, ACEs, privacy settings or alert notifi
 ## Generic Parameter List
 _Mode_ | Settings to manage with LUMT
 ---- | ----------------------------
-| | _Contact_: LUMT is used to add or remove contacts for Lync Server users.
-| | _ACL_: LUMT is used to add or remove ACEs on Lync Server users.
-| | _Privacy_: LUMT is used to manage privacy settings for Lync Server users.
-| | _Alerts_: LUMT is used to manage alert notification settings for Lync Server users.
+| | _Contact_: LUMT is used to add or remove contacts for Skype for Business Server 2015 users.
+| | _ACL_: LUMT is used to add or remove ACEs on Skype for Business Server 2015 users.
+| | _Privacy_: LUMT is used to manage privacy settings for Skype for Business Server 2015 users.
+| | _Alerts_: LUMT is used to manage alert notification settings for Skype for Business Server 2015 users.
 _UsersFile_ | Path to the text file containing user SIP addresses beginning with sip:
 
 _LUMT can be executed in one mode at a time. It is not possible to run with multiple modes during the same execution cycle._
@@ -121,17 +124,17 @@ Value | Description
 | If _ACEType_ is _Company_, _FederatedDomains_ or _PublicDomains_ | Don't specify any value
 
 # Setup
-Lync User Management Tool **MUST NOT RUN** on an existing Lync Server role. It **MUST** run on an application server used for UCMA applications (_the same server could be used for other UCMA applications_).
+Lync User Management Tool **MUST NOT RUN** on an existing Skype for Business Server 2015 role. It **MUST** run on an application server used for UCMA 5.0 applications (_the same server could be used for other UCMA applications_).
 
-In order for LUMT to work, a trusted application in needed in Lync Server Topology. There are 3 steps that must be done:
-* Create a Lync Server 2013Trusted Application Pool with:
+In order for LUMT to work, a trusted application in needed in Skype for Business Server 2015 Topology. There are 3 steps that must be done:
+* Create a Skype for Business Server 2015 Trusted Application Pool with:
 `New-CsTrustedApplicationPool -Id <ServerFqdn> -Registrar <RegistrarPoolFqdn> -Site <SiteNumber>`
 
 Parameter | Description
 --------- | -----------
 | ServerFqdn | FQDN of the server that will host LUMT
 | RegistrarPoolFqdn | FQDN of the pool that the Trusted Application Pool is related
-| SiteNumber | Site ID in Lync Server Topology. The Site ID can be retrieved with the Get-CsSite cmdlet
+| SiteNumber | Site ID in Skype for Business Server 2015 Topology. The Site ID can be retrieved with the Get-CsSite cmdlet
 
 * Create a Trusted Application with:
 `New-CsTrustedApplication -ApplicationId LUMT –TrustedApplicationPoolFqdn <ServerFqdn> -Port <PortNumber>`
@@ -141,11 +144,11 @@ Parameter | Description
 | ServerFqdn | Same FQDN as used for the New-CsTrustedApplicationPool cmdlet
 | PortNumber | Any non-used port number above 1024, for instance 12345
 
-* Enable Lync Server Topology with:
+* Enable Skype for Business Server 2015 Topology with:
 `Enable-CsTopology`
 
-Then, Lync Server 2013 binaries must be installed on the server by using the Lync Server 2013 Deployment Wizard. The following steps must be performed:
-* Install or Update Lync Server System 
+Then, Skype for Business Server 2015 binaries must be installed on the server by using the Skype for Business Server 2015 Deployment Wizard. The following steps must be performed:
+* Install or Update Skype for Business Server 2015 
 * Install Local Configuration Store 
 * Request, Install or Assign Certificates 
 * Start Services
@@ -153,7 +156,7 @@ Then, Lync Server 2013 binaries must be installed on the server by using the Lyn
 It is now possible to run LUMT from this server. 
 
 # Required DNS Records
-In case LUMT does not start and you get error “Automatic server discovery for the given sip user uri failed” in the log file, make sure to have at least one of the following records in place that resolves to your Lync Server pool:
+In case LUMT does not start and you get error “Automatic server discovery for the given sip user uri failed” in the log file, make sure to have at least one of the following records in place that resolves to your Skype for Business Server 2015 pool:
 * SRV:	`_sipinternaltls._tcp.<domain>`
 * SRV:	`_sip._tls.<domain>`
 * A:	`sipinternal.<domain>`

@@ -13,7 +13,7 @@ namespace LUMT.App
         const string applicationFullName = "Lync User Management Tool";
         const string applicationShortName = "LUMT";
         const string applicationUserAgent = "LUMT";
-        const string trustedApplicationID = "lumt";
+        const string trustedApplicationID = "urn:application:lumt";
 
         public static string ApplicationFullName
         {
