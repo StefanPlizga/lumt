@@ -310,7 +310,7 @@ namespace LUMT
             Console.ForegroundColor = originalColor;
             Console.WriteLine("");
             Console.WriteLine("Description");
-            Console.WriteLine(String.Format("    {0} tool can be used to manage contacts, ACEs, privacy settings or alert\n    notification settings for Lync Server 2013 users.", LumtGlobals.ApplicationShortName));
+            Console.WriteLine(String.Format("    {0} tool can be used to manage contacts, ACEs, privacy settings or alert\n    notification settings for Skype for Business Server 2015 users.", LumtGlobals.ApplicationShortName));
             Console.WriteLine("");
             Console.WriteLine("");
 
@@ -332,10 +332,10 @@ namespace LUMT
             Console.WriteLine("");
             Console.WriteLine("Generic Parameter List");
             Console.WriteLine(String.Format("    Mode\t\tSettings to manage with {0}. Available options are:", LumtGlobals.ApplicationShortName));
-            Console.WriteLine(String.Format("\t\t\t- Contact: {0} is used to add or remove contacts for\n\t\t\t  Lync Server users.", LumtGlobals.ApplicationShortName));
+            Console.WriteLine(String.Format("\t\t\t- Contact: {0} is used to add or remove contacts for\n\t\t\t  Skype for Business Server users.", LumtGlobals.ApplicationShortName));
             Console.WriteLine(String.Format("\t\t\t- ACL: {0} is used to add or remove ACEs on Lync\n\t\t\t  Server users.", LumtGlobals.ApplicationShortName));
-            Console.WriteLine(String.Format("\t\t\t- Privacy: {0} is used to manage privacy settings for\n\t\t\t  Lync Server users.", LumtGlobals.ApplicationShortName));
-            Console.WriteLine(String.Format("\t\t\t- Alerts: {0} is used to manage alert notification\n\t\t\t  settings for Lync Server users.", LumtGlobals.ApplicationShortName));
+            Console.WriteLine(String.Format("\t\t\t- Privacy: {0} is used to manage privacy settings for\n\t\t\t  Skype for Business Server users.", LumtGlobals.ApplicationShortName));
+            Console.WriteLine(String.Format("\t\t\t- Alerts: {0} is used to manage alert notification\n\t\t\t  settings for Skype for Business Server users.", LumtGlobals.ApplicationShortName));
             Console.WriteLine("");
             Console.WriteLine("    UsersFile\t\tPath to the text file containing user SIP addresses\n\t\t\tbeginning with sip:");
             Console.WriteLine("");
