@@ -15,6 +15,8 @@
 * 1.5.0.0:
 	* Skype for Business Server 2015 version (UCMA 5.0).
 	* Solution upgraded to Visual Studio 2017.
+* 1.5.0.1:
+	* Replaced references to Lync Server 2013 to Skype for Business Server 2015.
 
 # Help
 ## Description

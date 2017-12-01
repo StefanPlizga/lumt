@@ -1,4 +1,4 @@
-**_Version 1.5.0.0 is available! This version is natively compatible with Skype for Business Server 2015 (UCMA 5.0)._**
+**_Version 1.5.0.1 is available! This version is natively compatible with Skype for Business Server 2015 (UCMA 5.0)._**
 
 **Important: The author does not provide support in case issues are found when running LUMT. You could however download source code, rebuilt LUMT and troubleshoot in Debug mode in Visual Studio if you need to find out why a particular issue is occuring.**
 
@@ -20,5 +20,5 @@ Documentation is available here: [LUMT Documentation](docs/Documentation.md)
 
 # LUMT Download
 All versions are available in the [Releases](https://github.com/StefanPlizga/lumt/releases) section
-* Latest version (1.5.0.0) for Skype for Business Server 2015.
+* Latest version (1.5.0.1) for Skype for Business Server 2015.
 * Version 1.4.0.0 for Lync Server 2013.
